@@ -7,16 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ META }}
     <title>
-    {% block title %} {% endblock %}
+    {% block title %} {% include "partials/title.twig" %} {% endblock %}
     </title>
     <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
     <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
     {$STYLESHEETS}
 {% endblock head %}
 </head>
-<body>
+<body id="phpbb" class="nojs notouch section-{{ SCRIPT_NAME }} {{ BODY_CLASS }}">
 {% block body %}
-    Site body
 {% endblock body %}
 <details>
 <summary>Debug info</summary>
