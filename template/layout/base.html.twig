@@ -23,6 +23,9 @@ Loops:
 <ul>
 {% for key in loops|keys %}
     <strong>{{ key }}:</strong>
+    {% for forum in key|keys %}
+        {{ forum }}
+    {% endfor %}
 {% endfor %}
 </ul>
 {{ DEBUG_OUTPUT }}
