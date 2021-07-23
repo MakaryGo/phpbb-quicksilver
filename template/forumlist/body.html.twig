@@ -4,14 +4,11 @@
 #}
 Here goes forum list <br>
 {% for forum in forumrow %}
-    {% if (forum.S_IS_CAT and not forum.S_FIRST_ROW) or forumrow.S_NO_CAT  %}
+    {% if forum.S_IS_CAT and not forum.S_FIRST_ROW %}
     </section>
     {% endif %}
 
     <section class={{ forum.S_IS_CAT ? 'category' : 'forum' }}>
-    {% if forum.S_IS_CAT %}
-    Kategoria
-    {% endif %}
         {# {% for key, value in forum %}
         {{ key }}: {{ value }}<br>
         {% endfor %} #}
