@@ -19,8 +19,8 @@
 Twig version: {{ constant('Twig_Environment::VERSION') }}
 Loops: 
 <ul>
-{% for loop in loops %}
-    <li>{{ loop }}</li>
+{% for key in loops|keys %}
+    <strong>{{ key }}:</strong>
 {% endfor %}
 </ul>
 </details>
