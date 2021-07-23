@@ -9,8 +9,11 @@ Here goes forum list <br>
         {{ key }}: {{ value }}<br>
         {% endfor %} #}
         {{ forum.FORUM_NAME }}
-            
-    {% if forum.S_LAST_ROW %}
+    {% if not forum.S_IS_CAT %}
+    </section>
+    {% endif %}
+    
+    {% if forum.S_LAST_ROW  %}
     </section>
     {% endif %}
 
