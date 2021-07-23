@@ -3,6 +3,6 @@
     List (sub)forums
  #}
  Here goes forum list
- {% for forum in forumrow|keys %}
-     {{ forum }}
+ {% for key, value in forumrow|keys %}
+     {{ key }} - {{ value }}
  {% endfor %}

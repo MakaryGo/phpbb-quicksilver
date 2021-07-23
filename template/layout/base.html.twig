@@ -14,22 +14,19 @@
 {% block body %}
     Site body
 {% endblock body %}
-{% block debug %}
 <details>
 <summary>Debug info</summary>
+{% block debug %}
 Twig version: {{ constant('Twig_Environment::VERSION') }}<br>
 Script name: {{ SCRIPT_NAME }}; Template name: {{ T_TEMPLATE_NAME }}<br>
 Loops: 
 <ul>
 {% for key in loops|keys %}
     <strong>{{ key }}:</strong>
-    {% for forum in key|keys %}
-        {{ forum }}
-    {% endfor %}
 {% endfor %}
 </ul>
 {{ DEBUG_OUTPUT }}
-</details>
 {% endblock debug %}
+</details>
 </body>
 </html>
