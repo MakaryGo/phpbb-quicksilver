@@ -1,4 +1,12 @@
 html body {
   background: #f1f1f1;
 }
+
+section {
+  border: 1px solid #161616;
+}
+
+section.category {
+  border: green;
+}
 /*# sourceMappingURL=stylesheet.css.map */
