@@ -4,5 +4,7 @@
  #}
  Here goes forum list
  {% for forum in forumrow %}
-     {{ forum.FORUM_NAME }}
+     {% for key, value in forum %}
+     {{ key }}: {{ value }}<br>
+     {% endfor %}
  {% endfor %}
