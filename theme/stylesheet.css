@@ -16,5 +16,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  max-width: 1110px;
+  margin: auto;
 }
 /*# sourceMappingURL=stylesheet.css.map */
