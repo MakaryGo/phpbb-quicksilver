@@ -2,20 +2,18 @@
    forumlist/body.html.twig
    List (sub)forums
 #}
-Here goes forum list <br>
-<main>
 {% for forum in forumrow %}
     {% if not forum.S_IS_FIRST_ROW and forum.S_IS_CAT %}
     </section>
     {% endif %}
 
     <section class={{ forum.S_IS_CAT ? 'category' : 'forum' }}>
+        {{ forum.FORUM_NAME }}
         <details>
         {% for key, value in forum %}
         {{ key }}: {{ value }}<br>
         {% endfor %}
         </details>
-        {{ forum.FORUM_NAME }}
     {% if not forum.S_IS_CAT %}
     </section>
     {% endif %}
@@ -25,4 +23,3 @@ Here goes forum list <br>
     {% endif %}
 
 {% endfor %}
-</main>

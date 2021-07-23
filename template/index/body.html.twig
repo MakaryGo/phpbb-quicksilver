@@ -4,5 +4,10 @@
  #}
 {% extends "layout/base.html.twig" %}
 {% block body %}
+<header>
+{% include "overall_header/body.html.twig" %}
+</header>
+<main>
     {% include "forumlist/body.html.twig" %}
+</main>
 {% endblock %}
