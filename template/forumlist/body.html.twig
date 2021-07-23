@@ -2,6 +2,7 @@
    forumlist/body.html.twig
    List (sub)forums
 #}
+<main>
 Here goes forum list <br>
 {% for forum in forumrow %}
     {% if not forum.S_IS_FIRST_ROW and forum.S_IS_CAT %}
@@ -22,3 +23,4 @@ Here goes forum list <br>
     {% endif %}
 
 {% endfor %}
+</main>
