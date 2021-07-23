@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}">
 <head>
 {% block head %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ META }}
     <title>
-    {% block title %}{% endblock %}
+    {% block title %} {% endblock %}
     </title>
+    <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
+    <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
+    {$STYLESHEETS}
 {% endblock head %}
 </head>
 <body>
@@ -23,9 +27,6 @@ Loops:
 <ul>
 {% for l in loops|keys %}
     <strong>{{ l }}:</strong>
-    {% for key, value in l %}
-    {{ key }}: {{ value }}<br>
-    {% endfor %}
 {% endfor %}
 </ul>
 {{ DEBUG_OUTPUT }}
