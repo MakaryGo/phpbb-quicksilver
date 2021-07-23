@@ -4,6 +4,10 @@
 #}
 Here goes forum list <br>
 {% for forum in forumrow %}
+    {% if not forum.S_IS_FIRST_ROW and forum.S_IS_CAT %}
+    </section>
+    {% endif %}
+
     <section class={{ forum.S_IS_CAT ? 'category' : 'forum' }}>
         {# {% for key, value in forum %}
         {{ key }}: {{ value }}<br>
