@@ -4,7 +4,7 @@
 #}
 Here goes forum list <br>
 {% for forum in forumrow %}
-<section class="{{ forum.S_IS_CAT ? kategoria : forum }}">
+<section class={{ forum.S_IS_CAT ? 'category' : 'forum' }}>
 {% if forum.S_IS_CAT %}
 Kategoria
 {% endif %}
