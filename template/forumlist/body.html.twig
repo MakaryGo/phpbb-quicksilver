@@ -1,10 +1,14 @@
 {# 
-    forumlist/body.html.twig
-    List (sub)forums
- #}
- Here goes forum list <br>
- {% for forum in forumrow %}
-     {% for key, value in forum %}
-     {{ key }}: {{ value }}<br>
-     {% endfor %}
- {% endfor %}
+   forumlist/body.html.twig
+   List (sub)forums
+#}
+Here goes forum list <br>
+{% for forum in forumrow %}
+{% if forum.IS_CAT %}
+Kategoria
+{% endif %}
+    {% for key, value in forum %}
+    {{ key }}: {{ value }}<br>
+    {% endfor %}
+</section>
+{% endfor %}
