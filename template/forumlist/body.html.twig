@@ -10,9 +10,9 @@ Here goes forum list <br>
     {% endif %}
 
     <section class={{ forum.S_IS_CAT ? 'category' : 'forum' }}>
-        {# {% for key, value in forum %}
+        {% for key, value in forum %}
         {{ key }}: {{ value }}<br>
-        {% endfor %} #}
+        {% endfor %}
         {{ forum.FORUM_NAME }}
     {% if not forum.S_IS_CAT %}
     </section>

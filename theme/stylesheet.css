@@ -3,11 +3,9 @@ html body {
 }
 
 section {
-  border: 1px solid #161616;
-}
-
-section.category {
-  border-color: green;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
 }
 
 main {
